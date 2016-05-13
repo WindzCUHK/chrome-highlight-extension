@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Keyword Page</title>
+	<link href="css/popup.css" media="screen" rel="stylesheet" type="text/css">
+	<link href="css/toggle.css" media="screen" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<main id="mainBlock">
+		<div class="button-block">
+			<form id="new-group-form">
+				<input id="new-group-color" type="text" pattern="[0-9a-fA-f]{6}" title="hex color code" />
+				<input id="add-button" class="button" type="submit" value="+" title="add group" />
+			</form>
+		</div>
+		<section>
+			<span class="toggle">
+				<input type="checkbox" class="pure-toggle-checkbox" hidden />
+				<label class="pure-toggle flip" for="pure-toggle-">
+					<div class="fontawesome-remove">OFF</div>
+					<div class="fontawesome-ok">ON</div>
+				</label>
+			</span>
+			<header class="color-header">C72E04</header>
+			<button class="remove-group-button button">x</button>
+			<textarea class="highlight-words" placeholder="(separated by a space)"></textarea>
+		</section>
+	</main>
+
+	<script src="js/popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* source from: http://codepen.io/rgg/pen/waEYye */
+
+@charset "UTF-8";
+/*
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,300);
+*/
+
+.pure-toggle {
+	cursor: pointer;
+	font-size: 1ex;
+	width: 6em;
+	height: 3em;
+	display: inline-block;
+	position: relative;
+	background: #DDD;
+	text-align: left;
+	line-height: 3em;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-moz-perspective: 300px;
+	-webkit-perspective: 300px;
+	perspective: 300px;
+}
+
+.pure-toggle [class^='fontawesome-'] {
+	float: left;
+	margin: 0;
+	width: 50%;
+	text-align: center;
+	line-height: inherit;
+	font-family: 'FontAwesome', sans-serif;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+input[type='checkbox'] + .pure-toggle:before {
+	-moz-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	background-color: #cc0966;
+}
+input[type='checkbox'] + .pure-toggle [class^="fontawesome-"] {
+	color: #cc0966;
+}
+input[type='checkbox']:checked + .pure-toggle:before {
+	-moz-transform: rotateY(-180deg);
+	-ms-transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	background-color: #5EB9CC;
+}
+input[type='checkbox']:checked + .pure-toggle [class^="fontawesome-"] {
+	color: #5EB9CC;
+}
+
+.pure-toggle:before {
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #f5f5f5;
+	display: inline-block;
+	text-align: center;
+	font-family: 'FontAwesome', sans-serif;
+	content: "···";
+	color: #ffffff;
+	-moz-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+.pure-toggle.flip:before {
+	-moz-transform-origin: 50% 50%;
+	-ms-transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+}
+input[type='checkbox'] + .pure-toggle.flip:before {
+	-moz-animation: flip 0.5s ease-in-out forwards;
+	-webkit-animation: flip 0.5s ease-in-out forwards;
+	animation: flip 0.5s ease-in-out forwards;
+}
+input[type='checkbox']:checked + .pure-toggle.flip:before {
+	-moz-animation: flip-back 0.5s ease-in-out forwards;
+	-webkit-animation: flip-back 0.5s ease-in-out forwards;
+	animation: flip-back 0.5s ease-in-out forwards;
+}
+
+
+@keyframes flip-back {
+	0% {
+		-moz-transform: rotateY(0deg) translateX(0) scale(1);
+		-ms-transform: rotateY(0deg) translateX(0) scale(1);
+		-webkit-transform: rotateY(0deg) translateX(0) scale(1);
+		transform: rotateY(0deg) translateX(0) scale(1);
+	}
+	60%,
+		80% {
+		-moz-transform: rotateY(-360deg) translateX(0) scale(1.3);
+		-ms-transform: rotateY(-360deg) translateX(0) scale(1.3);
+		-webkit-transform: rotateY(-360deg) translateX(0) scale(1.3);
+		transform: rotateY(-360deg) translateX(0) scale(1.3);
+	}
+	100% {
+		margin-right: 3em;
+		-moz-transform: rotateY(-360deg) translateX(0) scale(1);
+		-ms-transform: rotateY(-360deg) translateX(0) scale(1);
+		-webkit-transform: rotateY(-360deg) translateX(0) scale(1);
+		transform: rotateY(-360deg) translateX(0) scale(1);
+	}
+}
+@keyframes flip {
+	0% {
+		margin-right: 3em;
+		-moz-transform: rotateY(0deg) translateX(0) scale(1);
+		-ms-transform: rotateY(0deg) translateX(0) scale(1);
+		-webkit-transform: rotateY(0deg) translateX(0) scale(1);
+		transform: rotateY(0deg) translateX(0) scale(1);
+	}
+	60%,
+		80% {
+		-moz-transform: rotateY(360deg) translateX(0) scale(1.3);
+		-ms-transform: rotateY(360deg) translateX(0) scale(1.3);
+		-webkit-transform: rotateY(360deg) translateX(0) scale(1.3);
+		transform: rotateY(360deg) translateX(0) scale(1.3);
+	}
+	100% {
+		margin-right: 0;
+		-moz-transform: rotateY(360deg) translateX(0) scale(1);
+		-ms-transform: rotateY(360deg) translateX(0) scale(1);
+		-webkit-transform: rotateY(360deg) translateX(0) scale(1);
+		transform: rotateY(360deg) translateX(0) scale(1);
+	}
+}
+
+@-webkit-keyframes flip-back {
+	0% {
+		-moz-transform: rotateY(0deg) translateX(0) scale(1);
+		-ms-transform: rotateY(0deg) translateX(0) scale(1);
+		-webkit-transform: rotateY(0deg) translateX(0) scale(1);
+		transform: rotateY(0deg) translateX(0) scale(1);
+	}
+	60%,
+		80% {
+		-moz-transform: rotateY(-360deg) translateX(0) scale(1.3);
+		-ms-transform: rotateY(-360deg) translateX(0) scale(1.3);
+		-webkit-transform: rotateY(-360deg) translateX(0) scale(1.3);
+		transform: rotateY(-360deg) translateX(0) scale(1.3);
+	}
+	100% {
+		margin-right: 3em;
+		-moz-transform: rotateY(-360deg) translateX(0) scale(1);
+		-ms-transform: rotateY(-360deg) translateX(0) scale(1);
+		-webkit-transform: rotateY(-360deg) translateX(0) scale(1);
+		transform: rotateY(-360deg) translateX(0) scale(1);
+	}
+}
+@-webkit-keyframes flip {
+	0% {
+		margin-right: 3em;
+		-moz-transform: rotateY(0deg) translateX(0) scale(1);
+		-ms-transform: rotateY(0deg) translateX(0) scale(1);
+		-webkit-transform: rotateY(0deg) translateX(0) scale(1);
+		transform: rotateY(0deg) translateX(0) scale(1);
+	}
+	60%,
+		80% {
+		-moz-transform: rotateY(360deg) translateX(0) scale(1.3);
+		-ms-transform: rotateY(360deg) translateX(0) scale(1.3);
+		-webkit-transform: rotateY(360deg) translateX(0) scale(1.3);
+		transform: rotateY(360deg) translateX(0) scale(1.3);
+	}
+	100% {
+		margin-right: 0;
+		-moz-transform: rotateY(360deg) translateX(0) scale(1);
+		-ms-transform: rotateY(360deg) translateX(0) scale(1);
+		-webkit-transform: rotateY(360deg) translateX(0) scale(1);
+		transform: rotateY(360deg) translateX(0) scale(1);
+	}
+}

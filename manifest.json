@@ -1,0 +1,28 @@
+{
+   "name": "Grouped multi-word highlight",
+   "description": "Highlight multiple words in different groups in web pages.",
+   "icons": {
+      "100": "img/100x100.png",
+      "128": "img/128x128.png",
+      "19": "img/19x19.png",
+      "48": "img/48x48.png"
+   },
+   "browser_action": {
+      "default_icon": "img/19x19.png",
+      "default_popup": "popup.html"
+   },
+
+   "permissions": [ "tabs", "http://*/*", "https://*/*", "storage" ],
+
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/highlight.css" ],
+      "js": [ "js/content-action.js" ],
+      "run_at": "document_idle",
+      "matches": [ "http://*/*", "https://*/*", "file://*/*" ]
+   } ],
+
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "manifest_version": 2,
+   "version": "0.1"
+}
