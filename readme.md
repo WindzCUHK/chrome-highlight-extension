@@ -8,7 +8,7 @@
 1. calculate a contrast color for the highlighted text
 
 # Demo
-![highlighted demo](./blob/master/demo.png)
+![highlighted demo](./demo.png?raw=true)
 
 Reference:
 http://james.padolsey.com/javascript/replacing-text-in-the-dom-solved/
