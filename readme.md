@@ -11,12 +11,12 @@
 ![highlighted demo](./demo.png?raw=true)
 
 Reference:
-http://james.padolsey.com/javascript/replacing-text-in-the-dom-solved/
-http://stackoverflow.com/questions/2582831/how-can-i-highlight-the-text-of-the-dom-range-object
-https://chrome.google.com/webstore/detail/multi-highlight/pfgfgjlejbbpfmcfjhdmikihihddeeji
+- http://james.padolsey.com/javascript/replacing-text-in-the-dom-solved/
+- http://stackoverflow.com/questions/2582831/how-can-i-highlight-the-text-of-the-dom-range-object
+- https://chrome.google.com/webstore/detail/multi-highlight/pfgfgjlejbbpfmcfjhdmikihihddeeji
 
 Icon:
-http://marketplace-images-production.s3-us-west-2.amazonaws.com/dojo/wp-content/uploads/2014/06/Marker_pen_icon.jpg
+- http://marketplace-images-production.s3-us-west-2.amazonaws.com/dojo/wp-content/uploads/2014/06/Marker_pen_icon.jpg
 
 Bug:
 - There may be change in DOM structure if the keyword spans across multi HTML tag.
